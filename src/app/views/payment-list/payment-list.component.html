@@ -1,4 +1,18 @@
-<a routerLink="payment">Add payment</a>
-<div *ngFor="let payment of payments | async">
-    {{ payment.cardHolder }}
+<div class="list-container">
+    <div class="flex card mr-1 mb-1" *ngFor="let payment of payments | async">
+        <div class="mr-3">
+            <p class="label">Card Number</p>
+            <h3 class="mb-1">{{ payment.cardNumber }}</h3>
+            <p class="label">Card Holder</p>
+            <h3 class="mb-1">{{ payment.cardHolder }}</h3>
+            <p class="label">Expiration Date</p>
+            <h3>{{ payment.expirationDate }}</h3>
+        </div>
+        <div>
+            <p class="label">CVV</p>
+            <h3 class="mb-1">{{ payment.securityCode }}</h3>
+            <p class="label">Amount</p>
+            <h3 class="mb-1">{{ payment.amount }}</h3>
+        </div>
+    </div>
 </div>
