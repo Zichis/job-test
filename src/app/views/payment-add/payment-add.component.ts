@@ -3,6 +3,7 @@ import { FormBuilder } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../app.state';
 import * as PaymentActions from '../../actions/payment.actions';
+import { v4 as uuid } from 'uuid';
 
 @Component({
   selector: 'app-payment-add',
@@ -12,6 +13,7 @@ import * as PaymentActions from '../../actions/payment.actions';
 export class PaymentAddComponent implements OnInit {
 
   paymentAddForm = this.fb.group({
+    id: [uuid()],
     cardNumber: [''],
     cardHolder: [''],
     expirationDate: [''],
