@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-payment-add',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaymentAddComponent implements OnInit {
 
-  constructor() { }
+  paymentAddForm = this.fb.group({
+    cardNumber: [''],
+    cardHolder: [''],
+    expirationDate: [''],
+    securityCode: [''],
+    amount: ['']
+  });
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
+  }
+
+  onAddPayment() {
+    //
   }
 
 }
