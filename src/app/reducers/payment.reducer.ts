@@ -1,4 +1,3 @@
-import { Action } from '@ngrx/store';
 import { Payment } from '../models/payment.model';
 import * as PaymentActions from '../actions/payment.actions';
 
