@@ -39,11 +39,7 @@ export class PaymentAddComponent implements OnInit {
   get amount(){ return this.paymentAddForm.get('amount'); }
 
   onAddPayment() {
-    console.log(this.paymentAddForm.controls.securityCode);
-    console.log(this.paymentAddForm.get('securityCode').value.length);
-    console.log(this.paymentAddForm.value);
     this.store.dispatch(new PaymentActions.AddPayment(this.paymentAddForm.value));
-    //this.router.navigate(['/']);
   }
 
 }
