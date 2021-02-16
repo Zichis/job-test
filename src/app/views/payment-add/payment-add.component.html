@@ -3,25 +3,30 @@
         <div class="mb-1">
             <label for="cardNumber">Card Number</label>
             <input type="text" formControlName="cardNumber" placeholder="Enter Card Number">
+            <span *ngIf="cardNumber.invalid && cardNumber.touched" class="error">Field cannot be blank</span>
         </div>
         <div class="mb-1">
             <label for="cardNumber">Card Holder</label>
             <input type="text" formControlName="cardHolder" placeholder="Enter Card Holder">
+            <span *ngIf="cardHolder.invalid && cardHolder.touched" class="error">Field cannot be blank</span>
         </div>
         <div class="mb-1">
             <label for="expirationdate">Expiration Date</label>
             <input type="date" formControlName="expirationDate" placeholder="Enter Expiration Date">
+            <span *ngIf="expirationDate.invalid && expirationDate.touched" class="error">Enter correct date</span>
         </div>
         <div class="mb-1">
             <label for="securityCode">CVV</label>
             <input type="text" formControlName="securityCode" placeholder="CVV">
+            <span *ngIf="securityCode.invalid && securityCode.touched" class="error">Field should be blank or 3 digits</span>
         </div>
         <div class="mb-1">
             <label for="securityCode">Amount</label>
-            <input type="text" formControlName="securityCode" placeholder="Enter Amount">
+            <input type="text" formControlName="amount" placeholder="Enter Amount">
+            <span *ngIf="amount.invalid && amount.touched" class="error">Field cannot be blank</span>
         </div>
         <div class="action-links flex">
-            <button type="submit" class="mr-1 btn-primary">Submit</button>
+            <button type="submit" [disabled]="paymentAddForm.invalid" class="mr-1 btn-primary">Submit</button>
             <a routerLink="/" class="link-secondary">Cancel</a>
         </div>
     </form>
