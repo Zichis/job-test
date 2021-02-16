@@ -13,6 +13,7 @@ import { PaymentAddComponent } from './views/payment-add/payment-add.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
+import { PaymentEffects } from './effects/payment.effects';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { EffectsModule } from '@ngrx/effects';
       payment: paymentReducer
     }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    EffectsModule.forRoot([])
+    EffectsModule.forRoot([PaymentEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]
