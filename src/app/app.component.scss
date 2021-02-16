@@ -1,0 +1,40 @@
+.top-nav {
+    display: flex;
+    background-color: rgb(5, 43, 82);
+    color: white;
+    padding: 20px 40px;
+    align-items: center;
+    -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+	   -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+	        box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0 20px;
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links li{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.nav-links li a {
+    color: rgb(238, 228, 209);
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+    color: orange;
+}
+
+.active {
+    color: orange;
+}
+
+.wrapper {
+    padding: 2rem;
+}
