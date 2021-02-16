@@ -39,6 +39,15 @@
     background-color: grey;
 }
 
+.error {
+    color: rgb(204, 32, 32);
+}
+
+button:disabled {
+    cursor: not-allowed;
+    background-color: rgb(139, 160, 189);
+}
+
 @media only screen and (min-width: 600px) {
     .createForm {
         width: 50%;
