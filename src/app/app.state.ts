@@ -1,5 +1,5 @@
-import { Payment } from './models/payment.model';
+import { PaymentState } from './reducers/payment.reducer';
 
 export interface AppState {
-    readonly payment: Payment[];
+    readonly payment: PaymentState;
 }
