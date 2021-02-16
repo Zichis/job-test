@@ -6,10 +6,14 @@ import { AppComponent } from './app.component';
 
 import { StoreModule } from '@ngrx/store';
 import { paymentReducer } from './reducers/payment.reducer';
+import { PaymentListComponent } from './views/payment-list/payment-list.component';
+import { PaymentAddComponent } from './views/payment-add/payment-add.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PaymentListComponent,
+    PaymentAddComponent
   ],
   imports: [
     BrowserModule,
