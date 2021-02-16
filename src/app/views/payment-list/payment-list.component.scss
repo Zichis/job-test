@@ -1,0 +1,19 @@
+.list-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: .5rem;
+    min-width: 150px;
+    -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+	   -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+	        box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+}
+
+.label {
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.7);
+}
