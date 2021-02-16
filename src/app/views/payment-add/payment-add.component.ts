@@ -4,7 +4,8 @@ import { Store } from '@ngrx/store';
 import { AppState } from '../../app.state';
 import * as PaymentActions from '../../actions/payment.actions';
 import { v4 as uuid } from 'uuid';
-import { ccvValidator, dateValidator } from '../../validators/payment.validators';
+import { ccvValidator, dateValidator, numberValidator } from '../../validators/payment.validators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-payment-add',
@@ -19,10 +20,10 @@ export class PaymentAddComponent implements OnInit {
     cardHolder: ['', [Validators.required]],
     expirationDate: ['', [Validators.required, dateValidator]],
     securityCode: ['', [ccvValidator]],
-    amount: ['', [Validators.required]]
+    amount: ['', [Validators.required, numberValidator]]
   });
 
-  constructor(private fb: FormBuilder, private store: Store<AppState>) { }
+  constructor(private fb: FormBuilder, private store: Store<AppState>, public router: Router) { }
 
   ngOnInit(): void {
   }
@@ -41,7 +42,8 @@ export class PaymentAddComponent implements OnInit {
     console.log(this.paymentAddForm.controls.securityCode);
     console.log(this.paymentAddForm.get('securityCode').value.length);
     console.log(this.paymentAddForm.value);
-    //this.store.dispatch(new PaymentActions.AddPayment(this.paymentAddForm.value));
+    this.store.dispatch(new PaymentActions.AddPayment(this.paymentAddForm.value));
+    //this.router.navigate(['/']);
   }
 
 }

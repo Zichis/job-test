@@ -12,8 +12,8 @@
         </div>
         <div class="mb-1">
             <label for="expirationdate">Expiration Date</label>
-            <input type="date" formControlName="expirationDate" placeholder="Enter Expiration Date">
-            <span *ngIf="expirationDate.invalid && expirationDate.touched" class="error">Enter correct date</span>
+            <input type="text" formControlName="expirationDate" placeholder="mm/dd/yyyy">
+            <span *ngIf="expirationDate.invalid && expirationDate.touched" class="error">Enter valid date</span>
         </div>
         <div class="mb-1">
             <label for="securityCode">CVV</label>
@@ -23,7 +23,7 @@
         <div class="mb-1">
             <label for="securityCode">Amount</label>
             <input type="text" formControlName="amount" placeholder="Enter Amount">
-            <span *ngIf="amount.invalid && amount.touched" class="error">Field cannot be blank</span>
+            <span *ngIf="amount.invalid && amount.touched" class="error">Enter valid amount</span>
         </div>
         <div class="action-links flex">
             <button type="submit" [disabled]="paymentAddForm.invalid" class="mr-1 btn-primary">Submit</button>
