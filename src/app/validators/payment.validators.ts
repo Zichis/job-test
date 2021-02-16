@@ -30,3 +30,13 @@ export function dateValidator(control: AbstractControl) {
 
     return null;
 }
+
+export function numberValidator(control: AbstractControl) {
+    if (isNaN(control.value)) {
+        return {
+            isError: true
+        }
+    }
+
+    return null;
+}
