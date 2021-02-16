@@ -31,6 +31,7 @@ export class PaymentEffects {
                 (data) => this.paymentService.addPayment(data.payload)
                     .pipe(
                         map(() => {
+                            alert("Payment added successfully!")
                             return new PaymentActions.AddPaymentSuccess(data.payload)
                         }),
                         catchError(error => of(new PaymentActions.AddPaymentFailure(error)))
