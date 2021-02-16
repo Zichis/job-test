@@ -1,1 +1,8 @@
-<p>payment-add works!</p>
+<form [formGroup]="paymentAddForm" (ngSubmit)="onAddPayment()">
+    <input type="text" formControlName="cardNumber" placeholder="Enter Card Number"><br>
+    <input type="text" formControlName="cardHolder" placeholder="Enter Card Holder"><br>
+    <input type="text" formControlName="expirationDate" placeholder="Enter Expiration Date"><br>
+    <input type="text" formControlName="securityCode" placeholder="CVV"><br>
+    <input type="text" formControlName="amount" placeholder="Enter Amount"><br>
+    <button type="submit">Submit</button>
+</form>
