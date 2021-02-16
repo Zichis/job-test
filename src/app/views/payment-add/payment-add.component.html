@@ -1,9 +1,28 @@
-<form [formGroup]="paymentAddForm" (ngSubmit)="onAddPayment()">
-    <input type="text" formControlName="cardNumber" placeholder="Enter Card Number"><br>
-    <input type="text" formControlName="cardHolder" placeholder="Enter Card Holder"><br>
-    <input type="date" formControlName="expirationDate" placeholder="Enter Expiration Date"><br>
-    <input type="text" formControlName="securityCode" placeholder="CVV"><br>
-    <input type="text" formControlName="amount" placeholder="Enter Amount"><br>
-    <button type="submit">Submit</button>
-    <a routerLink="/">Go back home</a>
-</form>
+<div class="form-container">
+    <form class="createForm" [formGroup]="paymentAddForm" (ngSubmit)="onAddPayment()">
+        <div class="mb-1">
+            <label for="cardNumber">Card Number</label>
+            <input type="text" formControlName="cardNumber" placeholder="Enter Card Number">
+        </div>
+        <div class="mb-1">
+            <label for="cardNumber">Card Holder</label>
+            <input type="text" formControlName="cardHolder" placeholder="Enter Card Holder">
+        </div>
+        <div class="mb-1">
+            <label for="expirationdate">Expiration Date</label>
+            <input type="date" formControlName="expirationDate" placeholder="Enter Expiration Date">
+        </div>
+        <div class="mb-1">
+            <label for="securityCode">CVV</label>
+            <input type="text" formControlName="securityCode" placeholder="CVV">
+        </div>
+        <div class="mb-1">
+            <label for="securityCode">Amount</label>
+            <input type="text" formControlName="securityCode" placeholder="Enter Amount">
+        </div>
+        <div class="action-links flex">
+            <button type="submit" class="mr-1 btn-primary">Submit</button>
+            <a routerLink="/" class="link-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
